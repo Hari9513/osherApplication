@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar color="theme-color">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-icon class="osher-icon" clear></ion-icon>
+      <ion-title class="osher-txt">MY Wallet</ion-title>
+      <ion-icon name="contact" class="profile-btn" (click)="loginNav();"></ion-icon>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+    <div class="user-img">
+      <img src="../../assets/imgs/wallet-purple.png">
+      <p class="your-blnc">Your Current Balance is</p>
+      <div class="points"><span><ion-icon name="ios-disc" class="coins"></ion-icon></span> {{currentUser?.balance | currency: 'Rs. '}}</div>
+      <button ion-button class="submit-btn" (click)="addMoney();">Add Money</button>
+    </div>
+    <div class="trnct">
+      <div class="p-title">Recent Activity</div>
+      <ion-card *ngFor="let wallet of walletDatas">
+          <ion-card-header>
+            <p class="trnct-date">{{wallet.created_AT | date:'dd MMM, yyyy'}}</p>
+            <span style="font-weight: bold;"><span *ngIf="wallet.creditedMoney">Amount Credited</span> <span *ngIf="wallet.debitedAmount">Transfered Amount</span> </span>
+            <span class="trnct-amount"><span *ngIf="wallet.creditedMoney">Rs.{{wallet.creditedMoney}}</span><span *ngIf="wallet.debitedAmount">-Rs.{{wallet.debitedAmount}}</span></span>
+          </ion-card-header>
+          <ion-card-content>
+            <p style="margin-top: -10px;">{{wallet.couponcode}}</p>
+          </ion-card-content>
+        </ion-card>
+      <ion-card *ngFor="let order of orderDatas">
+          <ion-card-header>
+            <p class="trnct-date">{{order.created_AT | date:'dd MMM, yyyy'}}</p>
+            <span style="font-weight: bold;">{{order.name}} - {{order.type}} </span>
+            <span class="trnct-amount"><span *ngIf="order.type == 'Buy'">-</span>Rs.{{order.price}}</span>
+          </ion-card-header>
+          <ion-card-content>
+            <p style="margin-top: -10px;">TRN No: OSH00878</p>
+          </ion-card-content>
+        </ion-card>
+<!-- 
+        <ion-card>
+            <ion-card-header>
+              <p class="trnct-date">28-07-2018</p>
+              <span style="font-weight: bold;">Buy Axis Bank</span>
+              <span class="trnct-amount">Rs.280</span>
+            </ion-card-header>
+            <ion-card-content>
+              <p style="margin-top: -10px;">TRN No: OSH00878</p>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card>
+              <ion-card-header>
+                <p class="trnct-date">28-07-2018</p>
+                <span style="font-weight: bold;">Buy Axis Bank</span>
+                <span class="trnct-amount">Rs.280</span>
+              </ion-card-header>
+              <ion-card-content>
+                <p style="margin-top: -10px;">TRN No: OSH00878</p>
+              </ion-card-content>
+            </ion-card> -->
+    </div>
+  </ion-content>
+  

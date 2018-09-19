@@ -1,0 +1,42 @@
+page-orderdetails {
+    background: #151318;
+    ion-item{
+        background-color: #151318!important;
+       
+    }
+    .item-md.item-block .item-inner{
+        border-bottom: none!important;
+    }
+
+    .title-btn{
+        background-color: transparent;
+        color: #fff;
+    }
+    .col{
+        background: transparent;
+        border: 1px solid #fff;
+        color: green;
+        padding:5px;
+        }
+    .list-md .item-input:last-child{
+        border: none;
+    }
+
+    ion-label{
+        color: #cccccc!important;
+    }
+ 
+   .page-title{
+       text-align: center;
+       background: #bf0f0f;
+       color: #ffffff;
+       padding: 10px 0px;
+   }
+
+   .lbl{
+       float: left;
+   }
+   .amt{
+       float: right;
+   }
+}

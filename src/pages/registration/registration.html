@@ -1,0 +1,41 @@
+ <div class="logo" style="margin-top:15px;"></div>
+  <form [formGroup]="myGroup" (ngSubmit)="register(myGroup.value)">
+    <ion-list formGroupName="tempData"class="reg-form">
+        <ion-item>
+          <ion-input type="text" placeholder="Full Name" formControlName="name" aria-required="true"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="email" placeholder="Email Id" formControlName="email" aria-required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Phone No" formControlName="phone" aria-required="true"></ion-input>
+        </ion-item>
+          
+        <ion-item>
+            <ion-input type="password" placeholder="Password" formControlName="password" aria-required="true"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-input type="text" placeholder="Contury" formControlName="country" aria-required="true"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-input type="text" placeholder="State" formControlName="state" aria-required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" placeholder="city" formControlName="city" aria-required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+           <ion-input type="text" placeholder="Profession" formControlName="profession" aria-required="true"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <button class="submit-btn" ion-button block padding type="Submit" [disabled]="myGroup.invalid">Register</button>
+            <button class="submit-btn" ion-button block padding (click)="loginNav()">Login </button>
+          </ion-item>
+    </ion-list>
+  </form>

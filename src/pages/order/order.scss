@@ -1,0 +1,64 @@
+page-order {
+    background: #151318;
+    ion-item{
+        background-color: #151318!important;
+        margin-bottom:10px!important;
+        
+    }
+    .item-md.item-block .item-inner{
+        border-bottom: none!important;
+    }
+    .scroll-content{
+        background-color: #151318;
+    }
+    .title-btn{
+        background-color: transparent;
+        color: #fff;
+        // font-size: 16px;
+    }
+    .col{
+        background: transparent;
+        border: 1px solid #fff;
+        color: green;
+        padding:5px;
+        }
+    .list-md .item-input:last-child{
+        border: none;
+    }
+
+    ion-label{
+        color: #cccccc!important;
+    }
+    
+    ion-input, ion-select{
+        width: 100%;
+        color: #c1c1c1!important;
+        border: 1px solid #c1c1c1;
+        margin: 5px;
+    }
+    ion-select{
+        width: 500px!important;
+    }
+   .order-form{
+       padding-bottom: 1px;
+   }
+
+   .page-title{
+       text-align: center;
+       background: #bf0f0f;
+       color: #ffffff;
+       padding: 10px 0px;
+   }
+   .btn{
+       width: 150px;
+       padding: 20px!important;
+       color: #ffffff;
+   }
+   .reset-btn{
+       background:gray;
+   }
+   .order-btn{
+       background: green;
+   }
+
+}

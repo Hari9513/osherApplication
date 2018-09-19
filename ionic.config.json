@@ -1,0 +1,7 @@
+{
+  "name": "Osher",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

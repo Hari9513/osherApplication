@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="theme-color">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-icon class="osher-icon" clear></ion-icon>
+      <ion-title class="osher-txt">ORDER</ion-title>
+      
+      <ion-icon name="contact" class="profile-btn" (click)="loginNav();"></ion-icon>
+    </ion-navbar>
+</ion-header>
+
+
+<div style="padding-top: 60px;">
+  <ion-item class="title-btn">
+      <label>{{stockData?.stock_name}}</label>
+      <label>Available : {{stockData?.stock_quantity}}</label>
+  </ion-item>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <label style="font-size: 50px;">{{stockData?.stock_price}}</label>
+        </ion-col>
+        <ion-col>
+          <ion-row><ion-col><label>+ {{stockData?.variationAmount | currency: 'Rs. '}}</label></ion-col></ion-row>
+          <ion-row><ion-col><label>+ {{stockData?.variationPercent}} %</label></ion-col></ion-row>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <!-- <ion-item style="color: #fff; background-color: #290435!important; padding: 0px!important;text-align: center;margin-top: 5px;">
+    <label>Trade</label>
+  </ion-item> -->
+  <form name="myForm" #myForm="ngForm" class="order-form">
+      <h1 class="page-title">Trade</h1>
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="--Select--" name="type" (change)="onChange()" [(ngModel)]="type">
+          <ion-option value="Buy">Buy</ion-option>
+          <ion-option value="Sell">Sell</ion-option>
+        </ion-select>
+        <ion-input type="text" end placeholder="Qty" name="quantity" (blur)="GetPercentage()" [(ngModel)]="stockQuantity"></ion-input>
+      </ion-item>
+       <ion-item>
+          <ion-input type="text" placeholder="Price(0.00 Market Price)" name="price" [(ngModel)]="expextedPrice"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button class="reset-btn btn" ion-button item-start>Reset</button>
+            <button class="order-btn btn" ion-button item-end (click)="placeOrder()">Place Order</button>
+          </ion-item>
+    </ion-list>
+  </form>
+ 
+</div>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="theme-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-icon class="osher-icon" clear></ion-icon>
+    <ion-title class="osher-txt">ORDER HISTORY</ion-title>
+    
+    <ion-icon name="contact" class="profile-btn" (click)="loginNav();"></ion-icon>
+  </ion-navbar>
+  <table class="stock-tbl">
+    <tr>
+      <th>Script No.</th>
+      <th>Status</th>
+      <th>Buy/Sell</th>
+      <th>Order Qty</th>
+      <th>Order Price</th>
+    </tr>
+    <tr>
+      <th>Order ID</th>
+      <th></th>
+      <th></th>
+      <th>EXE Qty</th>
+      <th>EXE Price</th>
+    </tr>
+</table>
+</ion-header>
+
+<ion-content >
+  <table class="stock-tbl tbl-txt">
+    <tr *ngFor="let order of orderDatas">
+      <td><div>{{order.name}}</div><div class="sub-row">CD00989</div></td>
+      <td><div>{{order.status}}</div><div class="sub-row"></div></td>
+      <td><div *ngIf="order.type == 'Buy'" class="buy">{{order.type}}</div><div *ngIf="order.type == 'Sell'" class="sell">{{order.type}}</div><div class="sub-row"></div></td>
+      <td><div>{{order.quantity}}</div><div class="sub-row">0</div></td>
+      <td><div>{{order.price}}</div><div class="sub-row">550.08</div></td>
+    </tr>
+    <!-- <tr>
+      <td><div>SBI Bank</div><div class="sub-row">CD00989</div></td>
+      <td><div>Fully Executed</div><div class="sub-row"></div></td>
+      <td><div class="sell">Sell</div><div class="sub-row"></div></td>
+      <td><div>10</div><div class="sub-row">10</div></td>
+      <td><div>550.08</div><div class="sub-row">550.08</div></td>
+    </tr>
+    <tr>
+      <td><div>Axis Bank</div><div class="sub-row">CD00989</div></td>
+      <td><div>Partial Executed</div><div class="sub-row"></div></td>
+      <td><div class="buy">Buy</div><div class="sub-row"></div></td>
+      <td><div>10</div><div class="sub-row">3</div></td>
+      <td><div>550.08</div><div class="sub-row">548.08</div></td>
+    </tr> -->
+    <!-- <tr class="sub-tr">
+      <td>CD8890</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>550.08</td>
+    </tr> -->
+  </table>
+</ion-content>

@@ -1,0 +1,38 @@
+page-orderhistory {
+    .stock-tbl{
+        width: 100%;
+        padding: 0px;   
+    }
+    .stock-tbl th{
+        padding: 5px 1px;
+        background:#333;
+        color: #fff;
+    }
+    .stock-tbl tr th{
+        padding:0px 0px 5px 0px;
+        font-size: 10px;
+    }
+    .stock-tbl tr th:nth-child(2){
+        padding:5px;
+        padding-left: 30px;
+    }
+    .stock-tbl tr td{
+        padding: 10px 6px;
+        padding-left: 16px;
+        background: #151318;
+        border-bottom: 2px solid rgba(4, 4, 4, 0.33);
+        font-size: 13px;
+    }
+    .tbl-txt tr td{
+        color: #ccc;
+    }
+    .sub-row{
+        font-style: italic;
+    }
+    .sell{
+        color: red;
+    }
+    .buy{
+        color: green;
+    }
+}

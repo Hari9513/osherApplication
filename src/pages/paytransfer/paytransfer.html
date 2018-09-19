@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="theme-color">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-icon class="osher-icon" clear></ion-icon>
+      <ion-title class="osher-txt">PAY/TRANSFER</ion-title>
+      <ion-icon name="contact" class="profile-btn" (click)="loginNav();"></ion-icon>
+    </ion-navbar>
+  
+  </ion-header>
+
+  <div class="user-img">
+    <img src="../../assets/imgs/wallet-purple.png">
+    <h3>Transfer</h3>
+  </div>
+  <form name="myForm" #myForm="ngForm" class="transfer-form">
+    <ion-list>
+      <ion-item>
+          <ion-input type="text" placeholder="Phone Number" name="phone" (change)="phoneExist()" [(ngModel)]="phone"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="phoneNotExist">
+        <p style="color: red">Phone Number Not Exist</p>
+      </ion-item>
+      <ion-item *ngIf="sameNumber">
+        <p style="color: red">Can't Transfer Amount to same Number</p>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder="Amount" name="amount" (change)="checkAmountExist()" [(ngModel)]="amount"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="invalidAmount">
+        <p style="color: red">Insufficient Balance</p>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder="Remarks" name="remarks" [(ngModel)]="remarks"></ion-input>
+      </ion-item>
+      <button ion-button block class="submit-btn" (click)="transferAmount()">Proceed</button>
+    </ion-list>
+  </form>
+
+

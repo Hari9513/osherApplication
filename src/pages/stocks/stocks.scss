@@ -1,0 +1,91 @@
+page-stocks {
+    .stocks-cntr ion-list{
+        margin: 0px;
+        padding: 0px;
+    }
+    .stocks-cntr ion-list ion-item{
+        background-color: #151318;
+        color: #fff; 
+        padding:0!important;
+    }
+    .stock-tbl{
+        width: 100%;
+        padding: 0px;   
+    }
+    .stock-tbl th{
+        padding: 10px 1px;
+        background:#333;
+        color: #fff;
+    }
+    .stock-tbl tr th{
+        padding:5px;
+    }
+    .stock-tbl tr th:nth-child(2){
+        padding:5px;
+        padding-left: 30px;
+    }
+    .stock-tbl tr td{
+        padding: 10px 6px;
+        padding-left: 16px;
+        background: #151318;
+        border-bottom: 2px solid rgba(4, 4, 4, 0.33);
+        font-size: 14px;
+    }
+    .item-md.item-block .item-inner{
+        padding: 0px!important;
+    }
+    .stock-tbl tr td:nth-child(3){
+        text-align: right;
+        font-size: 13px;
+        // color: #016101;
+        font-weight: 600;
+    }
+    // .stock-tbl tr:nth-child(odd){
+    //     background: #151318;
+    // }
+
+  
+}
+.platform-android .alertCustomCss{
+    button{
+      background: transparent;
+      color: white;
+      text-align: center!important;
+      border: 1px solid white!important;  
+    }
+  }
+
+.buy-btn{
+    color: green!important;
+}    
+.sell-btn{
+    color: red!important;
+}
+
+.alertCustomCss{
+    background-color: rgba(0,0,0,0.8);
+    button{
+        border-radius: 5px!important;
+        margin-bottom: 5px!important;
+    }
+    .alert-wrapper{
+        background:transparent;
+        border: 1px solid white!important;  
+        border-radius: 5px;
+    }
+    .alert-message {
+        color: skyblue;
+    }
+    .alert-title{
+        color: black;
+        text-align: center!important;
+        color: white;
+    }
+}
+
+.alert-md .alert-button .button-inner {
+    -webkit-box-pack: center!important;
+    -webkit-justify-content:  center!important; 
+    -ms-flex-pack:  center!important;
+        justify-content:  center!important; 
+  }

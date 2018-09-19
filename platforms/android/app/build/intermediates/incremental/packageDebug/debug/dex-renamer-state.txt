@@ -1,0 +1,4 @@
+#Fri Jul 20 20:26:08 IST 2018
+base.0=D\:\\osher\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=D\:\\osher\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -1,0 +1,38 @@
+page-mywallet {
+    .user-img{
+        text-align: center;
+        background: #009cff;
+        padding: 20px 0px;
+    }
+    .your-blnc{
+        font-size: 18px;
+    }
+    .points{
+        width: 80px;
+        background: green;
+        text-align: center;
+        padding: 5px 0px;
+        margin:auto;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 18px;
+    }
+    .coins{
+        color: #dfa301;
+    }
+    .trnct{
+        // padding: 20px;
+    }
+    .p-title{
+        padding: 10px;
+        background: #cccccc;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold!important;
+    }
+    .trnct-amount{
+        font-weight: bold;
+        float: right;
+        // margin-top: -50px;
+    }
+}
